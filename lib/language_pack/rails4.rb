@@ -100,10 +100,10 @@ WARNING
 
           clean_task = rake.task("assets:clean")
           if clean_task.task_defined?
-            puts "Cleaning assets"
+            puts "Cleaning assets custom"
             clean_task.invoke(env: rake_env)
 
-            cleanup_assets_cache
+            # cleanup_assets_cache
             @cache.store public_assets_folder
             @cache.store default_assets_cache
           end
